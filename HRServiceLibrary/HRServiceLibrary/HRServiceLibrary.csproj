@@ -41,7 +41,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\IDepartMentRepository.cs" />
+    <Compile Include="Repository\IPresonRepository.cs" />
+    <Compile Include="Repository\Model\DepartMentModel.cs" />
+    <Compile Include="Repository\Model\PersonModel.cs" />
+    <Compile Include="Service\IPersonInfoService.cs" />
+    <Compile Include="Service\Model\PersonInfo.cs" />
+    <Compile Include="Service\PersonInfoService.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
