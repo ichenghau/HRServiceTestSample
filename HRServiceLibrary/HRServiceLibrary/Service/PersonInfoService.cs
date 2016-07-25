@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using HRServiceLibrary.Service.Model;
+using HRServiceLibrary.Repository.Model;
 
 namespace HRServiceLibrary.Service
 {
@@ -28,7 +29,25 @@ namespace HRServiceLibrary.Service
         /// <returns></returns>
         public IEnumerable<PersonInfo> Get()
         {
-            throw new NotImplementedException();
+            var person = _PresonRepository.Get();
+            var departMent = _DepartMentRepository.Get();
+
+            var dpt = new DepartMentModel();
+            var list = new List<PersonInfo>();
+
+            foreach (var item in person)
+            {
+                dpt = departMent.FirstOrDefault(f => f.Dpt == item.Dpt);
+                list.Add(new PersonInfo()
+                {
+                    DptName = dpt.Name,
+                    Empno = item.Empno,
+                    JobTitle = item.JobTitle,
+                    UserName = item.Name
+                });
+            }
+
+            return list;
         }
     }
 }
