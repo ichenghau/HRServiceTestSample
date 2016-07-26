@@ -47,7 +47,7 @@ namespace HRServiceLibrary.Service
                 });
             }
 
-            return list;
+            return list.OrderBy(o=>o.Empno);
         }
     }
 }

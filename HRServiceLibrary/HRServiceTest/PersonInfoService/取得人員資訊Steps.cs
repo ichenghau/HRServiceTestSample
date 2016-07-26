@@ -9,6 +9,7 @@ using HRServiceLibrary.Repository.Model;
 using System.Collections.Generic;
 using HRServiceLibrary.Service.Model;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Linq;
 
 
 namespace HRServiceTest.PersonInfoService
@@ -62,7 +63,7 @@ namespace HRServiceTest.PersonInfoService
         [Then(@"人員資訊取得為""(.*)""的資料")]
         public void Then人員資訊取得為的資料(string p0, Table table)
         {
-            var actual = ScenarioContext.Current.Get<IEnumerable<PersonInfo>>("actual").ToExpectedObject();
+            var actual = ScenarioContext.Current.Get<IEnumerable<PersonInfo>>("actual").ToList().ToExpectedObject();
             var expected = table.CreateSet<PersonInfo>();
             actual.ShouldEqual(expected);
         }
