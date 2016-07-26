@@ -47,6 +47,7 @@
     <Compile Include="Repository\Model\PersonModel.cs" />
     <Compile Include="Service\IPersonInfoService.cs" />
     <Compile Include="Service\Model\PersonInfo.cs" />
+    <Compile Include="Service\Model\PsersonCondition.cs" />
     <Compile Include="Service\PersonInfoService.cs" />
   </ItemGroup>
   <ItemGroup />

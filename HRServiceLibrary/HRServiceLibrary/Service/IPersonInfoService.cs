@@ -15,7 +15,8 @@ namespace HRServiceLibrary.Service
         /// <summary>
         /// 取得人員資訊
         /// </summary>
+        /// <param name="condition">人員資訊查詢條件</param>
         /// <returns></returns>
-        IEnumerable<PersonInfo> Get();
+        IEnumerable<PersonInfo> Get(PsersonCondition condition);
     }
 }

@@ -32,6 +32,13 @@ namespace HRServiceTest.PersonInfoService
                 _DepartMentRepository
                 );
         }
+        
+        [Given(@"設定的查詢""(.*)""的條件")]
+        public void Given設定的查詢的條件(string p0, Table table)
+        {
+            var PsersonCondition = table.CreateInstance<PsersonCondition>();
+            ScenarioContext.Current.Set(PsersonCondition, "PsersonCondition");
+        }
 
         [Given(@"人員為""(.*)""的資料")]
         public void Given人員為的資料(string p0, Table table)
@@ -52,10 +59,11 @@ namespace HRServiceTest.PersonInfoService
         {
             var PersonModel = ScenarioContext.Current.Get<IEnumerable<PersonModel>>("PersonModel");
             var DepartMentModel = ScenarioContext.Current.Get<IEnumerable<DepartMentModel>>("DepartMentModel");
+            var PsersonCondition = ScenarioContext.Current.Get<PsersonCondition>("PsersonCondition");
             _PresonRepository.Get().ReturnsForAnyArgs(PersonModel);
             _DepartMentRepository.Get().ReturnsForAnyArgs(DepartMentModel);
 
-            var actual = target.Get();
+            var actual = target.Get(PsersonCondition);
 
             ScenarioContext.Current.Set(actual, "actual");
         }

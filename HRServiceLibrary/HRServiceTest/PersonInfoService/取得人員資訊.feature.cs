@@ -79,41 +79,48 @@ namespace HRServiceTest.PersonInfoService
 this.ScenarioSetup(scenarioInfo);
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                        "IsIncludeGoAway"});
+            table1.AddRow(new string[] {
+                        "true"});
+#line 8
+ testRunner.Given("設定的查詢\"PsersonCondition\"的條件", ((string)(null)), table1, "Given ");
+#line hidden
+            TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                         "Empno",
                         "Name",
                         "Dpt",
                         "JobTitle"});
-            table1.AddRow(new string[] {
+            table2.AddRow(new string[] {
                         "A01",
                         "陳怡臻",
                         "0001",
                         "創辦人"});
-#line 8
- testRunner.Given("人員為\"PersonModel\"的資料", ((string)(null)), table1, "Given ");
-#line hidden
-            TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
-                        "Dpt",
-                        "Name"});
-            table2.AddRow(new string[] {
-                        "0001",
-                        "創辦室"});
 #line 11
- testRunner.And("部門為\"DepartMentModel\"的資料", ((string)(null)), table2, "And ");
-#line 14
- testRunner.When("取得人員資訊", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("人員為\"PersonModel\"的資料", ((string)(null)), table2, "And ");
 #line hidden
             TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Dpt",
+                        "Name"});
+            table3.AddRow(new string[] {
+                        "0001",
+                        "創辦室"});
+#line 14
+ testRunner.And("部門為\"DepartMentModel\"的資料", ((string)(null)), table3, "And ");
+#line 17
+ testRunner.When("取得人員資訊", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+            TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                         "Empno",
                         "UserName",
                         "DptName",
                         "JobTitle"});
-            table3.AddRow(new string[] {
+            table4.AddRow(new string[] {
                         "A01",
                         "陳怡臻",
                         "創辦室",
                         "創辦人"});
-#line 15
- testRunner.Then("人員資訊取得為\"PersonInfo\"的資料", ((string)(null)), table3, "Then ");
+#line 18
+ testRunner.Then("人員資訊取得為\"PersonInfo\"的資料", ((string)(null)), table4, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -124,68 +131,148 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void 取得人員資訊依員工編號排序()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("取得人員資訊，依員工編號排序", ((string[])(null)));
-#line 19
+#line 22
 this.ScenarioSetup(scenarioInfo);
 #line hidden
-            TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
+                        "IsIncludeGoAway"});
+            table5.AddRow(new string[] {
+                        "true"});
+#line 23
+ testRunner.Given("設定的查詢\"PsersonCondition\"的條件", ((string)(null)), table5, "Given ");
+#line hidden
+            TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
                         "Empno",
                         "Name",
                         "Dpt",
                         "JobTitle"});
-            table4.AddRow(new string[] {
+            table6.AddRow(new string[] {
                         "A02",
                         "龔柔心",
                         "0002",
                         "研究員"});
-            table4.AddRow(new string[] {
+            table6.AddRow(new string[] {
                         "A01",
                         "陳怡臻",
                         "0001",
                         "創辦人"});
-            table4.AddRow(new string[] {
+            table6.AddRow(new string[] {
                         "A03",
                         "林智仁",
                         "0002",
                         "研究經理"});
-#line 20
- testRunner.Given("人員為\"PersonModel\"的資料", ((string)(null)), table4, "Given ");
+#line 26
+ testRunner.And("人員為\"PersonModel\"的資料", ((string)(null)), table6, "And ");
 #line hidden
-            TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
                         "Dpt",
                         "Name"});
-            table5.AddRow(new string[] {
+            table7.AddRow(new string[] {
                         "0001",
                         "創辦室"});
-            table5.AddRow(new string[] {
+            table7.AddRow(new string[] {
                         "0002",
                         "研究室"});
-#line 25
- testRunner.And("部門為\"DepartMentModel\"的資料", ((string)(null)), table5, "And ");
-#line 29
+#line 31
+ testRunner.And("部門為\"DepartMentModel\"的資料", ((string)(null)), table7, "And ");
+#line 35
  testRunner.When("取得人員資訊", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-            TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
                         "Empno",
                         "UserName",
                         "DptName",
                         "JobTitle"});
-            table6.AddRow(new string[] {
+            table8.AddRow(new string[] {
                         "A01",
                         "陳怡臻",
                         "創辦室",
                         "創辦人"});
-            table6.AddRow(new string[] {
+            table8.AddRow(new string[] {
                         "A02",
                         "龔柔心",
                         "研究室",
                         "研究員"});
-            table6.AddRow(new string[] {
+            table8.AddRow(new string[] {
                         "A03",
                         "林智仁",
                         "研究室",
                         "研究經理"});
-#line 30
- testRunner.Then("人員資訊取得為\"PersonInfo\"的資料", ((string)(null)), table6, "Then ");
+#line 36
+ testRunner.Then("人員資訊取得為\"PersonInfo\"的資料", ((string)(null)), table8, "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("取得人員資訊，當條件不含離職的人員")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "取得人員資訊")]
+        public virtual void 取得人員資訊當條件不含離職的人員()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("取得人員資訊，當條件不含離職的人員", ((string[])(null)));
+#line 43
+this.ScenarioSetup(scenarioInfo);
+#line hidden
+            TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
+                        "IsIncludeGoAway"});
+            table9.AddRow(new string[] {
+                        "false"});
+#line 44
+ testRunner.Given("設定的查詢\"PsersonCondition\"的條件", ((string)(null)), table9, "Given ");
+#line hidden
+            TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Empno",
+                        "Name",
+                        "Dpt",
+                        "JobTitle",
+                        "IsGoAway"});
+            table10.AddRow(new string[] {
+                        "A02",
+                        "龔柔心",
+                        "0002",
+                        "研究員",
+                        "true"});
+            table10.AddRow(new string[] {
+                        "A01",
+                        "陳怡臻",
+                        "0001",
+                        "創辦人",
+                        "false"});
+            table10.AddRow(new string[] {
+                        "A03",
+                        "林智仁",
+                        "0002",
+                        "研究經理",
+                        "true"});
+#line 47
+ testRunner.And("人員為\"PersonModel\"的資料", ((string)(null)), table10, "And ");
+#line hidden
+            TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Dpt",
+                        "Name"});
+            table11.AddRow(new string[] {
+                        "0001",
+                        "創辦室"});
+            table11.AddRow(new string[] {
+                        "0002",
+                        "研究室"});
+#line 52
+ testRunner.And("部門為\"DepartMentModel\"的資料", ((string)(null)), table11, "And ");
+#line 56
+ testRunner.When("取得人員資訊", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+            TechTalk.SpecFlow.Table table12 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Empno",
+                        "UserName",
+                        "DptName",
+                        "JobTitle"});
+            table12.AddRow(new string[] {
+                        "A01",
+                        "陳怡臻",
+                        "創辦室",
+                        "創辦人"});
+#line 57
+ testRunner.Then("人員資訊取得為\"PersonInfo\"的資料", ((string)(null)), table12, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

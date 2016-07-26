@@ -26,8 +26,9 @@ namespace HRServiceLibrary.Service
         /// <summary>
         /// 取得人員資訊
         /// </summary>
+        /// <param name="condition">人員資訊查詢條件</param>
         /// <returns></returns>
-        public IEnumerable<PersonInfo> Get()
+        public IEnumerable<PersonInfo> Get(PsersonCondition condition)
         {
             var person = _PresonRepository.Get();
             var departMent = _DepartMentRepository.Get();
