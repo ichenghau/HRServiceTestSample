@@ -68,13 +68,13 @@ namespace HRServiceTest.PersonInfoService
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("取得人員資訊")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("取得人員資訊，欄位需要有員工編號、姓名、部門名稱、職稱")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "取得人員資訊")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("mytag")]
-        public virtual void 取得人員資訊()
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("取得人員資訊")]
+        public virtual void 取得人員資訊欄位需要有員工編號姓名部門名稱職稱()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("取得人員資訊", new string[] {
-                        "mytag"});
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("取得人員資訊，欄位需要有員工編號、姓名、部門名稱、職稱", new string[] {
+                        "取得人員資訊"});
 #line 7
 this.ScenarioSetup(scenarioInfo);
 #line hidden
@@ -114,6 +114,78 @@ this.ScenarioSetup(scenarioInfo);
                         "創辦人"});
 #line 15
  testRunner.Then("人員資訊取得為\"PersonInfo\"的資料", ((string)(null)), table3, "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("取得人員資訊，依員工編號排序")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "取得人員資訊")]
+        public virtual void 取得人員資訊依員工編號排序()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("取得人員資訊，依員工編號排序", ((string[])(null)));
+#line 19
+this.ScenarioSetup(scenarioInfo);
+#line hidden
+            TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Empno",
+                        "Name",
+                        "Dpt",
+                        "JobTitle"});
+            table4.AddRow(new string[] {
+                        "A02",
+                        "龔柔心",
+                        "0002",
+                        "研究員"});
+            table4.AddRow(new string[] {
+                        "A01",
+                        "陳怡臻",
+                        "0001",
+                        "創辦人"});
+            table4.AddRow(new string[] {
+                        "A03",
+                        "林智仁",
+                        "0002",
+                        "研究經理"});
+#line 20
+ testRunner.Given("人員為\"PersonModel\"的資料", ((string)(null)), table4, "Given ");
+#line hidden
+            TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Dpt",
+                        "Name"});
+            table5.AddRow(new string[] {
+                        "0001",
+                        "創辦室"});
+            table5.AddRow(new string[] {
+                        "0002",
+                        "研究室"});
+#line 25
+ testRunner.And("部門為\"DepartMentModel\"的資料", ((string)(null)), table5, "And ");
+#line 29
+ testRunner.When("取得人員資訊", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+            TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Empno",
+                        "UserName",
+                        "DptName",
+                        "JobTitle"});
+            table6.AddRow(new string[] {
+                        "A01",
+                        "陳怡臻",
+                        "創辦室",
+                        "創辦人"});
+            table6.AddRow(new string[] {
+                        "A02",
+                        "龔柔心",
+                        "研究室",
+                        "研究員"});
+            table6.AddRow(new string[] {
+                        "A03",
+                        "林智仁",
+                        "研究室",
+                        "研究經理"});
+#line 30
+ testRunner.Then("人員資訊取得為\"PersonInfo\"的資料", ((string)(null)), table6, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
