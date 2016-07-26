@@ -30,7 +30,7 @@ namespace HRServiceLibrary.Service
         /// <returns></returns>
         public IEnumerable<PersonInfo> Get(PsersonCondition condition)
         {
-            var person = _PresonRepository.Get();
+            var person = _PresonRepository.Get().Where(w => (condition.IsIncludeGoAway ? true : w.IsGoAway == false));
             var departMent = _DepartMentRepository.Get();
 
             var dpt = new DepartMentModel();
